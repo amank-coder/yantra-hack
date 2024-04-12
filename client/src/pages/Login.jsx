@@ -9,16 +9,15 @@ const Login = () => {
             <h2 className='text-center font-bold text-2xl text-white mb-2'>Select your role</h2>
             <div className='bg-white rounded-md flex gap-4 items-center p-4 h-36 mb-4 cursor-pointer hover:opacity-80'>
                 <div>
-                <img src='/teacher.png' className='relative -left-12 w-48'/>
+                    <img src='/teacher.png' className='relative -left-12 w-48'/>
                 </div>
                 <div>
                     <h2 className='text-2xl mx-8 mr-16'>Teacher</h2>
                 </div>
-                
             </div>
             <div className='bg-white rounded-md flex gap-4 items-center p-4 h-36 mb-4 cursor-pointer hover:opacity-80' onClick={()=>navigate('/login-form')}>
                 <div>
-                <img src='/student.png' className='relative -left-12 w-48'/>
+                    <img src='/student.png' className='relative -left-12 w-48'/>
                 </div>
                 <div>
                     <h2 className='text-2xl mx-8 mr-16'>Student</h2>
