@@ -7,60 +7,67 @@ import Navbar from '../components/Navbar';
 const Home = () => {
     const data = [
         {
-            name:"abc",
-            img:"/ai.jpg",
-            review:"aaaaaaaaaaaaaaaaaaaa"
+            name:"Cyber Security",
+            img:"/img1.png",
         },
         {
-            name:"abc",
-            img:"/ai.jpg",
-            review:"vvvvvvvvvvvvvvvvvvvvvvvv"
+            name:"Generative AI",
+            img:"/img2.png",
         },
         {
-            name:"abc",
-            img:"/ai.jpg",
-            review:"ccccccccccccccccccccccccc"
+            name:"Python",
+            img:"/img3.png",
+        },
+        {
+            name:"Java",
+            img:"/img4.png",
+        },
+        {
+            name:"Blockchain",
+            img:"/img5.png",
+        },
+        {
+            name:"Web Development",
+            img:"/img6.png",
         }
+
     ]
     const settings = {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 3,
+        slidesToShow: 4,
         slidesToScroll: 1
       };
   
     return (
     <div>
-        <div className='bg-banner h-[550px]'>
+        <div className='bg-banner2 h-[580px]'>
             <Navbar />
-            <div className="bg-purple-500">
-
-            </div>
+        <h1 className='pt-24 mx-12 text-5xl font-bold'>Preparing Curious <span className='bg-gradient-to-r from-[#f600fe] to-[#a136ff] bg-clip-text text-transparent'>minds</span></h1>
+        <h1 className='pt-2 mx-12 text-5xl font-bold'>to design their <span className='bg-gradient-to-r from-[#f600fe] to-[#a136ff] bg-clip-text text-transparent'>future</span></h1>
+        <button className='mx-12 bg-gradient-to-r from-[#f600fe] via-[#a136ff] to-[#0033d9] px-8 py-2 rounded-xl mt-2 font-bold text-2xl'>Learn now</button>
         </div>
-        <div className="bg-gradient-to-r from-[#f600fe] via-[#a136ff] to-[#0033d9] h-[300px]">
-
+        <div className="bg-gradient-to-r from-[#f600fe] via-[#a136ff] to-[#0033d9] h-[270px] overflow-x-hidden pt-4 px-24">
+        <h2 className='text-center font-bold text-2xl text-white mb-4'>Learn Top Skills</h2>
+        <Slider {...settings}>
+        {
+            data.map((item)=>(
+                <div>
+                <img src={item.img} />
+                <h2 className='text-center text-white font-semibold'>{item.name}</h2>
+            </div>
+                
+            ))
+        }   
+        </Slider> 
         </div>
     
-    {/* <div className='w-3/4 m-auto'>
-        <div className='mt-20 mb-20'>
-        <Slider {...settings}>
-            {data.map((d)=>(
-                <div className='bg-red-200 h-[450px] rounded-xl'>
-                    <div className='h-56 rounded-t-xl flex justify-center items-center bg-blue-200'>
-                        <img src={d.img} className='h-44 w-44 rounded-full'/>
-                    </div>
-                    <div className='flex flex-col justify-center items-center gap-4 p-4'>
-                        <p>{d.name}</p>
-                        <p>{d.review}</p>
-                        <button>Read</button>
-                    </div>
-
-                </div>
-            ))}
-            </Slider>
-        </div>
-    </div> */}
+    <div>
+        <h2 className='text-center text-2xl font-bold mt-4'>Top Courses</h2>
+        <div className=" bg-purple-700 h-1 mx-auto w-8"></div>
+        jhkjhjhkjh
+    </div>
         {/* <div>
     <div className='flex bg-[#010633] text-white justify-center'>
         <div className="py-[56px] px-[20px] md:px-[60px] 2xl:px-[110px] flex flex-col md:flex-row gap-36">

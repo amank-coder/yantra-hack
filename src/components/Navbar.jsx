@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex gap-56 h-[95px] pr-[40px] items-center text-[18px] text-black font-bold w-full md:fixed z-10">
+    <div className="flex gap-56 h-[95px] pr-[40px] items-center text-[18px] text-black font-bold w-full z-10">
       <div className="w-[40px] md:w-[200px]">
         <a href="/" className="cursor-pointer" onClick={() => handleClick('home')}>
           <img src="/logo.png" alt="logo" className='w-56'/>
@@ -21,31 +21,23 @@ const Navbar = () => {
       </div>
       <div className="hidden md:flex justify-end gap-8 w-full items-center">
         <a
-          className={ 'hover:scale-110 hover:text-main cursor-pointer transition-transform ease-in-out duration-700'}
+          className={ 'hover:scale-110 hover:text-main hover:underline cursor-pointer transition-transform ease-in-out duration-700'}
           href="/"
         >
           About
         </a>
 
         <a
-          className={ 'hover:scale-110 hover:text-main cursor-pointer transition-transform ease-in-out duration-700'}
+          className={ 'hover:scale-110 hover:text-main hover:underline cursor-pointer transition-transform ease-in-out duration-700'}
           href="/"
         >
           My Courses
         </a>
         
         <div>
-          <button className="w-[144px] h-[51px] text-[18px] border-black group-hover:border-[1px] hover:text-main border rounded-md">
-            <a href="/passes">Login</a>
+          <button className="w-[144px] h-[51px] text-[18px] border-black hover:text-main border rounded-md hover:bg-gradient-to-r from-[#f600fe] via-[#a136ff] to-[#0033d9] hover:text-white">
+            <a href="/login">Login</a>
           </button>
-          <span className="absolute top-0 left-0 w-[1px] h-2 bg-[#FFF]"></span>
-          <span className="absolute top-0 right-0 w-[1px] h-2 bg-[#FFF]"></span>
-          <span className="absolute top-0 left-0 w-2 h-[1px] bg-[#FFF]"></span>
-          <span className="absolute top-0 right-0 w-2 h-[1px] bg-[#FFF]"></span>
-          <span className="absolute bottom-0 left-0 w-2 h-[1px] bg-[#FFF]"></span>
-          <span className="absolute bottom-0 right-0 w-2 h-[1px] bg-[#FFF]"></span>
-          <span className="absolute bottom-0 right-0 w-[1px] h-2 bg-[#FFF]"></span>
-          <span className="absolute bottom-0 left-0 w-[1px] h-2 bg-[#FFF]"></span>
         </div>
       </div>
       {/* svelte-ignore a11y-no-static-element-interactions */}

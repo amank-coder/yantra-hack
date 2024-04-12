@@ -8,7 +8,10 @@ export default {
     extend: {
       backgroundImage: {
         'banner': "url('/banner.png')",
-        'logo': "url('/logo.png')"
+        'banner2': "url('/banner2.png')",
+        'logo': "url('/logo.png')",
+        'loginbg': "url('/loginbg.png')"
+
       },
     },
   },
