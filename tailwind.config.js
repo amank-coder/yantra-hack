@@ -10,7 +10,7 @@ export default {
         'banner': "url('/banner.png')",
         'banner2': "url('/banner2.png')",
         'logo': "url('/logo.png')",
-        'loginbg': "url('/loginbg.png')"
+        'loginbg': "url('/loginbg2.png')"
 
       },
     },

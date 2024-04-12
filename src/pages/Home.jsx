@@ -43,7 +43,9 @@ const Home = () => {
     return (
     <div>
         <div className='bg-banner2 h-[580px]'>
-            <Navbar />
+        <Navbar />
+
+        
         <h1 className='pt-24 mx-12 text-5xl font-bold'>Preparing Curious <span className='bg-gradient-to-r from-[#f600fe] to-[#a136ff] bg-clip-text text-transparent'>minds</span></h1>
         <h1 className='pt-2 mx-12 text-5xl font-bold'>to design their <span className='bg-gradient-to-r from-[#f600fe] to-[#a136ff] bg-clip-text text-transparent'>future</span></h1>
         <button className='mx-12 bg-gradient-to-r from-[#f600fe] via-[#a136ff] to-[#0033d9] px-8 py-2 rounded-xl mt-2 font-bold text-2xl'>Learn now</button>
@@ -66,31 +68,38 @@ const Home = () => {
     <div>
         <h2 className='text-center text-2xl font-bold mt-4'>Top Courses</h2>
         <div className=" bg-purple-700 h-1 mx-auto w-8"></div>
-        jhkjhjhkjh
+        <div className='grid grid-cols-3 space-x-4 mx-8 mt-8'>
+            <div className='bg-purple-500 rounded-md h-48'></div>
+            <div className='bg-purple-500 rounded-md h-48'></div>
+            <div className='bg-purple-500 rounded-md h-48'></div>
+        </div>
     </div>
-        {/* <div>
-    <div className='flex bg-[#010633] text-white justify-center'>
-        <div className="py-[56px] px-[20px] md:px-[60px] 2xl:px-[110px] flex flex-col md:flex-row gap-36">
+
+
+
+    {/* Footer */}
+    <div className='flex bg-gradient-to-r from-[#f600fe] via-[#a136ff] to-[#0033d9] text-white justify-center mt-8'>
+        <div className="pt-8 bottom-0 px-[20px] md:px-[60px] 2xl:px-[110px] flex flex-col md:flex-row gap-36">
             <div className='flex flex-col'>
-                <div className='ml-8'>
-                    <img src='/footerLogo.png' alt='logo'/>
+                <div className='bg-white mt-8 rounded-full w-48'>
+                    <img src='/logo.png' alt='logo'/>
                 </div>
                 <div className='mt-24 text-center md:text-start'>
                     <h1 className='text-[22px] font-bold mb-4'>Social Media </h1>
                     <div className='flex gap-4 justify-around'>
-                        <span className='cursor-pointer'><img src='/facebook.png' alt='facebook' /></span>
-                        <span className="cursor-pointer"><img src='/facebook.png' alt='facebook' /></span>
-                        <span className='cursor-pointer'><img src='/facebook.png' alt='facebook' /></span>
-                        <span className="cursor-pointer"><img src='/facebook.png' alt='facebook' /></span>
+                        <span className='cursor-pointer'><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg> </span>
+                        <span className="cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></span>
+                        <span className='cursor-pointer'><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></span>
+                        <span className="cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span>
                     </div>
                 </div>
             </div>
-        <div className="p-2 ml-8">
-        <div class="flex flex-col gap-2 text-center mr-8 md:mr-0 md:text-start">
+        <div className="p-2">
+        <div class="flex flex-col gap-2 text-start">
             <h1 class="font-bold text-[22px]">Services</h1>
-            <p class="underline text-[20px] font-medium cursor-pointer">AI Tutor</p>
-            <p class="underline text-[20px] font-medium cursor-pointer">Learning path generator</p>
-            <p class="underline text-[20px] font-medium cursor-pointer">Multi-lingual Support</p>
+            <p class="text-[20px] font-medium cursor-pointer">AI Tutor</p>
+            <p class="text-[20px] font-medium cursor-pointer">Learning path generator</p>
+            <p class="text-[20px] font-medium cursor-pointer">Multi-lingual Support</p>
         </div>
         <div class="mt-16 flex flex-col gap-2 mr-8 md:mr-0 text-center md:text-start">
             <h1 class="font-bold text-[22px]">Company</h1>
@@ -104,29 +113,12 @@ const Home = () => {
             <label for="email" className="text-[20px]">Email address</label>
             <input type="text" name="email" className="bg-transparent border-2 p-2 px-4 w-[327px]" placeholder="Eg: johndoe@gmail.com"/>
             <p className="text-[14px] w-[327px] mt-2">Get regular updates and stay in touch as we share the latest developments on Vidya Mandir.</p>
-        </div>
-        <div className="group relative inline-block mt-16">
-            <button className="bg-gradient-to-r from-[#0000FF] to-[#4141F2] group-hover:from-transparent group-hover:to-transparent w-[150px] md:w-[267px] h-[32px] md:h-[55px] text-[18px] md:text-[30px] border-[#76777b] group-hover:border-[1px] hover:text-main">
-              Register
-            </button>
-            <span className="absolute top-0 left-0 w-[1px] h-2 bg-[#FFF]"></span>
-            <span className="absolute top-0 right-0 w-[1px] h-2 bg-[#FFF]"></span>
-            <span className="absolute top-0 left-0 w-2 h-[1px] bg-[#FFF]"></span>
-            <span className="absolute top-0 right-0 w-2 h-[1px] bg-[#FFF]"></span>
-            <span className="absolute bottom-0 left-0 w-2 h-[1px] bg-[#FFF]"></span>
-            <span className="absolute bottom-0 right-0 w-2 h-[1px] bg-[#FFF]"></span>
-            <span className="absolute bottom-0 right-0 w-[1px] h-2 bg-[#FFF]"></span>
-            <span className="absolute bottom-0 left-0 w-[1px] h-2 bg-[#FFF]"></span>
-          </div>    
+        </div>  
         </div>
     </div>
     
 </div>
-<div className='flex gap-[4rem] md:gap-[8rem] xl:gap-[16rem] items-center px-[18px] md:px-[60px] text-white pb-16 justify-center '>
-<p className='text-[12px] md:text-[20px] font-medium'>Copyright@Metanet Devcon</p>
-<p className="text-[12px] md:text-[20px]">Terms & Condition</p>
-</div>
-</div> */}
+
     </div>
   )
 }
