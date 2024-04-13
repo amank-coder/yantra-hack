@@ -15,6 +15,9 @@ export default function Sidebar({ children }) {
       setExpanded(true);  
   },[window.innerWidth])
 
+  const user = JSON.parse(localStorage.getItem("user"))
+  console.log(user)
+
   return (
     <aside className="h-screen fixed">
       <nav className="h-full flex flex-col bg-white border-r shadow-sm">
@@ -55,8 +58,8 @@ export default function Sidebar({ children }) {
           `}
           >
             <div className="leading-4">
-              <h4 className="font-semibold">Aman Konchgamey</h4>
-              <span className="text-xs text-gray-600">aman@gmail.com</span>
+              <h4 className="font-semibold">{user.name}</h4>
+              <span className="text-xs text-gray-600">{user.email}</span>
             </div>
             <div className={`${!logout ? 'hidden' : 'block'} relative left-20 bottom-8`}>
               <Logout />
