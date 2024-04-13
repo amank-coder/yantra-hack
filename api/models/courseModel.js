@@ -9,14 +9,22 @@ const courseSchema = new Schema(
       type: String,
     },
     createdBy: {
-        type: String,
+      type: String,
     },
     imgUrl: {
-        type: String,
+      type: String,
+    },
+    videoId: {
+      type: String,
     },
     reviews: [
       {
-        type: String,
+        review: {
+          type: String,
+        },
+        userName: {
+          type: String,
+        },
       },
     ],
   },
@@ -25,4 +33,4 @@ const courseSchema = new Schema(
   }
 );
 
-module.exports = mongoose.model("Course", courseSchema);
+module.exports = mongoose.model('Course', courseSchema);

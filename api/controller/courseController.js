@@ -28,28 +28,29 @@ exports.getCourses = async (req, res, next) => {
 
 
 exports.updateCourses = async (req, res, next) => {
-    try {
-      const { id } = req.params;
-      const courseId = new mongoose.Types.ObjectId(id);
-      const { review } = req.body;
-  
-      let course = await Course.findById(courseId);
-  
-      if (!course) {
-        return res.status(404).json({ message: "Course not found" });
-      }
-  
-      course.reviews.push(review);
-  
-      await course.save();
-  
-      return res.json({
-        message: "Review added updated successfully",
-        course
-      });
-    } catch (error) {
-      console.error("Error updating course review:", error);
-      return res.status(500).json({ message: "Internal server error", error: error });
-    }
-  }
+  try {
+    const { id } = req.params;
+    const courseId = new mongoose.Types.ObjectId(id);
+    const { review, userName } = req.body;
 
+    let course = await Course.findById(courseId);
+
+    if (!course) {
+      return res.status(404).json({ message: "Course not found" });
+    }
+
+    // Push the review object with user's name
+    course.reviews.push({ review, userName });
+    
+
+    await course.save();
+
+    return res.json({
+      message: "Review added updated successfully",
+      course
+    });
+  } catch (error) {
+    console.error("Error updating course review:", error);
+    return res.status(500).json({ message: "Internal server error", error: error });
+  }
+}

@@ -8,6 +8,7 @@ import Courseworth from './pages/Courseworth'
 import NotFound from './pages/NotFound'
 import PrivateRoute from './components/routes/PrivateRoute'
 import Signup from './pages/Signup'
+import AiTutor from './pages/AiTutor'
 
 function App() {
 
@@ -26,6 +27,11 @@ function App() {
           <Route path='/course-worth' element={
             <PrivateRoute>
               <Courseworth />
+            </PrivateRoute>
+            } />
+            <Route path='/ai-tutor' element={
+            <PrivateRoute>
+              <AiTutor />
             </PrivateRoute>
             } />
         <Route path='*' element={<NotFound />} />

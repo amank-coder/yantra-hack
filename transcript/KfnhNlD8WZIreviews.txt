@@ -1,0 +1,39 @@
+Anika: "Fantastic tutorial! The presenter explained model serialization using pickle and joblib in a clear and concise manner. The examples provided were practical and easy to follow. Looking forward to applying this knowledge in my own ML projects."
+
+Aryan: "Very informative video! The instructor did a great job explaining the concepts. I liked how they compared pickle and joblib. Excited to try this out on my own models!"
+
+Ishaan: "Excellent walkthrough! The explanations were thorough, and the examples made it easy to understand. I appreciate the practical approach. Can't wait to dive deeper into ML using these techniques."
+
+Sakshi: "Clear and helpful tutorial! The instructor explained the process step-by-step, which was perfect for beginners like me. The comparison between pickle and joblib was insightful. Thank you!"
+
+Vikram: "The tutorial was okay, but I wish there was more depth on the differences between pickle and joblib. I wanted a clearer understanding of when to use each method."
+
+Amit: "Decent tutorial, but I found the pacing a bit fast. It would have been better with slower explanations and more detailed examples."
+
+Kabir: "Informative and well-presented video! The explanations were detailed yet easy to follow. I appreciate the practical examples provided. Looking forward to exploring more tutorials like this."
+
+Priya: "I expected more insights into the advantages of joblib over pickle, but the tutorial only covered the basics. More depth would have been appreciated."
+
+Aditi: "The explanations were a bit confusing at times, especially regarding the performance differences between pickle and joblib. I wish there was more clarity on this."
+
+Ravi: "The tutorial lacked real-world examples or practical applications of model serialization. It felt too theoretical and less hands-on.
+
+Neha: "Great tutorial! The instructor's explanations were clear and concise. I appreciated the emphasis on practical applications. Excited to use pickle and joblib for saving my ML models."
+
+Rahul: "Very helpful video! The presenter explained the topic clearly, and the examples were relevant. I feel confident about using pickle and joblib for model serialization now. Thank you!"
+
+Kunal: "The instructor's explanations were not as thorough as I hoped. I needed more detailed instructions to fully grasp the concepts."
+
+Swati: "The tutorial could have been more engaging with interactive exercises or quizzes to reinforce learning. It felt a bit passive."
+
+Riya: "The video quality was good, but I found the content a bit too basic. I was hoping for more advanced insights into model serialization."
+
+Vivek: "I expected more focus on troubleshooting common issues with model serialization, but the tutorial mainly covered the basics."
+
+Shreya: "Fantastic explanation of model serialization! The instructor made a complex topic easy to understand. I liked the comparison between pickle and joblib. Looking forward to experimenting with this in my projects."
+
+Aarav: "The tutorial was informative, but it lacked practical examples that would have made the concepts easier to understand and apply."
+
+Meera: "The tutorial was a good introduction, but I was left wanting more information on advanced techniques for model serialization."
+
+Arjun: "The tutorial was decent, but I felt that the instructor could have provided more context on when to choose pickle versus joblib based on specific use cases."
