@@ -45,14 +45,14 @@ const Login2 = () => {
             <form className="flex flex-col md:w-[500px] mx-auto bg-gradient-to-r from-[#f600fe] via-[#a136ff] to-[#0033d9] p-8 text-main gap-2 rounded-lg" onSubmit={handleSubmit}>
                 <h2 className='text-center font-bold text-3xl text-white mb-4'>Login</h2>
                 
-                <label for="name" class="text-start text-white">Username</label>
-                <input type='text' name="email" placeholder="Enter your username" class="px-4 py-1 bg-transparent border mb-8" value={email} onChange={(e)=>setEmail(e.target.value)}/>
+                <label htmlFor="name" className="text-start text-white">Email</label>
+                <input type='text' name="email" placeholder="Enter your username" className="px-4 py-1 bg-transparent border mb-8" value={email} onChange={(e)=>setEmail(e.target.value)}/>
     
-                <label for="contact" class="text-start text-white">Password</label>
-                <input type='text' name="password" class="px-4 py-1 bg-transparent border mb-8" placeholder="Enter password" value={password} onChange={(e)=>setPassword(e.target.value)}/>
-
-                <div class="mt-4 mx-auto">
-                    <button class=" hover:opacity-80 w-[110px] md:w-[245px] h-[28px] md:h-[50px] text-[14px] md:text-[30px] text-white hover:text-main border border-white rounded-lg" type="submit">
+                <label htmlFor="contact" className="text-start text-white">Password</label>
+                <input type='text' name="password" className="px-4 py-1 bg-transparent border mb-8" placeholder="Enter password" value={password} onChange={(e)=>setPassword(e.target.value)}/>
+                <div className='text-end text-2xl font-bold hover:underline cursor-pointer text-white'><a href='/signup'>Sign Up</a></div>
+                <div className="mt-4 mx-auto">
+                    <button className=" hover:opacity-80 w-[110px] md:w-[245px] h-[28px] md:h-[50px] text-[14px] md:text-[30px] text-white hover:text-main border border-white rounded-lg" type="submit">
                         Submit
                     </button>
                 </div>

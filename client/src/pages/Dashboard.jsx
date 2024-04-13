@@ -13,15 +13,15 @@ const Dashboard = () => {
                 <div className='flex flex-col gap-8'>
                   <div className='flex flex-col'>
                     <label htmlFor="name" className='text-start text-sm text-gray-700'>Name</label>
-                    <input name="name" type='text' className=" px-3 py-2 border rounded-lg bg-gray-100 focus:border-blue-500 focus:outline-none w-72" value=""/>
+                    <input name="name" type='text' className=" px-3 py-2 border rounded-lg bg-gray-100 focus:border-blue-500 focus:outline-none w-72" value={user?.name}/>
                   </div>
                   <div className='flex flex-col'>
                     <label htmlFor="name" className='text-start text-sm text-gray-700'>Email</label>
-                    <input name="name" type='text' className=" px-3 py-2 border rounded-lg bg-gray-100 focus:border-blue-500 focus:outline-none w-72" value=""/>
+                    <input name="name" type='text' className=" px-3 py-2 border rounded-lg bg-gray-100 focus:border-blue-500 focus:outline-none w-72" value={user?.email} />
                   </div>
                   <div className='flex flex-col'>
                     <label htmlFor="name" className='text-start text-sm text-gray-700'>Qualification</label>
-                    <input name="name" type='text' className=" px-3 py-2 border rounded-lg bg-gray-100 focus:border-blue-500 focus:outline-none w-72" value=""/>
+                    <input name="name" type='text' className=" px-3 py-2 border rounded-lg bg-gray-100 focus:border-blue-500 focus:outline-none w-72" value={user?.email} />
                   </div>
                   <div className='flex flex-col'>
                     <label htmlFor="name" className='text-start text-sm text-gray-700'>Preferred Language</label>

@@ -89,7 +89,7 @@ export function SidebarItem({ icon, text, active, link }) {
         ${
           active
             ? "from-[#a136ff] to-[#0033d9] text-purple-800"
-            : "hover:bg-[#a136ff] text-gray-600"
+            : "hover:bg-[#a136ff] text-gray-600 hover:text-white"
         }
     `}>
       {icon}
