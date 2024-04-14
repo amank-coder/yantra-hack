@@ -39,7 +39,6 @@ exports.updateCourses = async (req, res, next) => {
       return res.status(404).json({ message: "Course not found" });
     }
 
-    // Push the review object with user's name
     course.reviews.push({ review, userName });
     
 
@@ -54,3 +53,4 @@ exports.updateCourses = async (req, res, next) => {
     return res.status(500).json({ message: "Internal server error", error: error });
   }
 }
+   

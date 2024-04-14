@@ -18,7 +18,7 @@ app.use(cors());
 app.use('/api/auth', authRoute)
 app.use('/api/course', courseRoute);
 
-app.listen(PORT, () => {
+app.listen(PORT, () => {  
     connectDB()
     console.log(`Server running at http://localhost:${PORT}/`);
 });

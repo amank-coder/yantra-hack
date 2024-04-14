@@ -9,6 +9,7 @@ import NotFound from './pages/NotFound'
 import PrivateRoute from './components/routes/PrivateRoute'
 import Signup from './pages/Signup'
 import AiTutor from './pages/AiTutor'
+import Testyourself from './pages/Testyourself'
 
 function App() {
 
@@ -29,12 +30,17 @@ function App() {
               <Courseworth />
             </PrivateRoute>
             } />
-            <Route path='/ai-tutor' element={
+          <Route path='/ai-tutor' element={
             <PrivateRoute>
               <AiTutor />
             </PrivateRoute>
             } />
-        <Route path='*' element={<NotFound />} />
+          <Route path='/test-yourself' element={
+              <PrivateRoute>
+                <Testyourself />
+              </PrivateRoute>
+            } />
+          <Route path='*' element={<NotFound />} />
       </Routes>
     </>
   )

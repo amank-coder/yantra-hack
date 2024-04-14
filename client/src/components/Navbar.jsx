@@ -17,10 +17,13 @@ const Navbar = () => {
 
   return (
     <div className="flex gap-56 h-[95px] pr-[40px] items-center text-[18px] text-black font-bold w-full z-10">
-      <div className="w-[40px] md:w-[200px]">
+      <div className="w-[40px] md:w-[200px] hidden md:block">
         <a href="/" className="cursor-pointer" onClick={() => handleClick('home')}>
           <img src="/logo.png" alt="logo" className='w-56'/>
         </a>
+      </div>
+      <div className='block md:hidden ml-2'>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
       </div>
       <div className="hidden md:flex justify-end gap-8 w-full items-center">
         <a
@@ -47,17 +50,9 @@ const Navbar = () => {
       <div className="md:hidden absolute right-2 ml-4 cursor-pointer flex gap-2">
         {!sidebar ? (
           <div className="group relative inline-block">
-            <button className="bg-gradient-to-r from-[#0000FF] to-[#4141F2] group-hover:from-transparent group-hover:to-transparent h-[39px] w-[100px] text-[12px] border-[#76777b] group-hover:border-[1px] hover:text-main">
-              Buy Passes
+            <button className="bg-gradient-to-r from-[#f600fe] via-[#a136ff] to-[#0033d9] hover:text-white h-[39px] w-[100px] text-[12px] border-[#76777b] group-hover:border-[1px] hover:text-main">
+              Login
             </button>
-            <span className="absolute top-0 left-0 w-[1px] h-2 bg-[#FFF]"></span>
-            <span className="absolute top-0 right-0 w-[1px] h-2 bg-[#FFF]"></span>
-            <span className="absolute top-0 left-0 w-2 h-[1px] bg-[#FFF]"></span>
-            <span className="absolute top-0 right-0 w-2 h-[1px] bg-[#FFF]"></span>
-            <span className="absolute bottom-0 left-0 w-2 h-[1px] bg-[#FFF]"></span>
-            <span className="absolute bottom-0 right-0 w-2 h-[1px] bg-[#FFF]"></span>
-            <span className="absolute bottom-0 right-0 w-[1px] h-2 bg-[#FFF]"></span>
-            <span className="absolute bottom-0 left-0 w-[1px] h-2 bg-[#FFF]"></span>
           </div>
         ) : (
           <div onClick={toggleMenu} onKeyPress={toggleMenu} className="z-40">

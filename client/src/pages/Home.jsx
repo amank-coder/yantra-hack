@@ -3,6 +3,9 @@ import Slider from 'react-slick'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Navbar from '../components/Navbar';
+import mobileSide from './../components/MobileSide';
+import { useEffect } from 'react';
+import { useState } from 'react';
 
 const Home = () => {
     const data = [
@@ -32,16 +35,26 @@ const Home = () => {
         }
 
     ]
+    const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(()=>{
+    if(window.innerWidth<640)
+      setIsMobile(true);
+    else 
+      setIsMobile(false);  
+  },[window.innerWidth])
+
     const settings = {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 4,
+        slidesToShow: isMobile ? 1 : 4,
         slidesToScroll: 1
       };
   
     return (
     <div>
+    <mobileSide open={true}/>
         <div className='bg-banner2 h-[580px]'>
         <Navbar />
 

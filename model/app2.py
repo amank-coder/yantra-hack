@@ -29,7 +29,7 @@ text_splitter=CharacterTextSplitter(
 texts=text_splitter.split_text(file_content)
 embeddings= HuggingFaceEmbeddings()
 vectorStore_openAI = FAISS.from_texts(texts, embeddings)
-os.environ["OPENAI_API_KEY"]="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"
+os.environ["OPENAI_API_KEY"]="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"
 chain=load_qa_chain(OpenAI(),chain_type="stuff")
 
 def worthness(user_query):
@@ -98,19 +98,63 @@ def worth():
     source_lang = target_lang
     user_query = request.json.get('query')
     user_query = translateintoeng(user_query, source_lang)
-    response = worthness(user_query)
+    response = worthness(f'Only provide an overview of the course like its tech stack or topics covered in the course without answering specific questions given by user. Question is:{user_query}')
     answer= translateintolang(response, target_lang)
     return jsonify({"answer": answer})   
 
 @app.route('/answer_doubt', methods=['POST'])
-def answer_doubt(target_lang):
+def answer_doubt():
     target_lang = request.json.get('target');
     source_lang = target_lang
-    user_doubt = request.json.get('doubt')
+    user_doubt = request.json.get('doubt') 
     user_doubt = translateintoeng(user_doubt, source_lang)
     response = process_doubt(user_doubt)
     answer= translateintolang(response, target_lang)
     return jsonify({"answer": answer})
+
+def generate_question(text):
+    prompt = "Generate a 4 multiple choice question technical question to check student understanding based on the following course:\n\n" + text + "\n\n. Don't ask beyond the provided content. Question:"
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+        messages=[{"role": "user", "content": prompt}],
+        max_tokens=1024,
+        n=1,
+        stop=None,
+        temperature=0.5,
+    )
+    question=response.choices[0].message.content.strip()
+    return question
+
+def check_answer(question, answer, text):
+    prompt = "Question: " + question + "\nAnswer: " + answer + "\nText Reference:\n" + text + "\n\nIs this answer correct Yes or No? If no, then provide correct answers "
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+        messages=[{"role": "user", "content": prompt}],
+        max_tokens=1024,
+        n=1,
+        stop=None,
+        temperature=0.5,
+    )
+    return response.choices[0].message.content.strip()
+    """if response.choices[0].message.content.strip()== 'yes':
+        return True
+    else:
+        return False"""
+@app.route('/test', methods=['GET'])
+def test():
+    with open('D:/yantra/transcript/ok2s1vV9XW0.txt', 'r') as file:
+        text_reference = file.read()
+    question = generate_question(text_reference)
+    return question;
+
+@app.route('/testans', methods=['POST'])
+def checker():
+    with open('D:/yantra/transcript/ok2s1vV9XW0.txt', 'r') as file:
+        text_reference = file.read()
+    student_answer = request.json.get('student_answer')
+    question = request.json.get('student_question')
+
+    return check_answer(question, student_answer, text_reference)
 
 if __name__ == '__main__':
     app.run(debug=True)

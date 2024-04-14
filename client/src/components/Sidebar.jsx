@@ -79,9 +79,7 @@ export function SidebarItem({ icon, text, active, link }) {
   const { expanded } = useContext(SidebarContext)
   
   return (
-    <li
-      
-    >
+    <li>
     <a href={link} className={`
         relative flex items-center py-2 px-3 my-4
         font-medium rounded-md cursor-pointer
