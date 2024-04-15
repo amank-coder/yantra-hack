@@ -49,12 +49,15 @@ const Home = () => {
         infinite: true,
         speed: 500,
         slidesToShow: isMobile ? 1 : 4,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        autoPlay: true,
+        autoplaySpeed: 2000,
+        cssEase: "linear"
       };
   
     return (
     <div>
-    <mobileSide open={true}/>
+    {/* <mobileSide open={true}/> */}
         <div className='bg-banner2 h-[580px]'>
         <Navbar />
 
@@ -79,22 +82,58 @@ const Home = () => {
         </div>
     
     <div>
-        <h2 className='text-center text-2xl font-bold mt-4'>Top Courses</h2>
-        <div className=" bg-purple-700 h-1 mx-auto w-8"></div>
-        <div className='grid grid-cols-3 space-x-4 mx-8 mt-8'>
-            <div className='bg-purple-500 rounded-md h-48'></div>
-            <div className='bg-purple-500 rounded-md h-48'></div>
-            <div className='bg-purple-500 rounded-md h-48'></div>
+        <h2 className='text-center text-3xl font-bold mt-8'>Top Courses</h2>
+        <div className=" bg-purple-500 h-1 mx-auto w-8"></div>
+        <div className='grid grid-cols-1 md:grid-cols-3 space-x-4 mx-8 mt-8 gap-2'>
+            <div className='bg-purple-500 rounded-md h-72 p-2 cursor-pointer hover:transform hover:scale-105'>
+                <img src='/thumb1.jpg' className=''/>
+                <p className='text-gray-200 text-2xl mt-2 ml-2'>Save Model to File</p>
+            </div>
+            <div className='bg-purple-500 rounded-md h-72 p-2 cursor-pointer hover:transform hover:scale-105'>
+                <img src='/thumb2.jpg' className=''/>
+                <p className='text-gray-200 text-2xl mt-2 ml-2'>Random Forest</p>
+            </div>
+            <div className='bg-purple-500 rounded-md h-72 p-2 cursor-pointer hover:transform hover:scale-105'>
+                <img src='/thumb3.jpg' className=''/>
+                <p className='text-gray-200 text-2xl mt-2 ml-2'>Prompt Engineering</p>
+            </div>
         </div>
     </div>
+
+    <div className="bg-white px-16 pt-24 font-semibold text-3xl text-center ">Our Services </div>
+      <div className="flex flex-col md:flex-row gap-2 bg-white justify-between md:px-16 pt-8 pb-12">
+
+      <div className="shadow-lg hover:scale-105 hover:shadow-purple-500 cursor-pointer rounded-md border-black p-2">
+                  <img src='/worth.jpg' alt='service-1' className='w-56 mx-auto'/>
+                  <p className='text-center font-semibold'>Course Worthiness</p>
+                  <p className='w-56 text-center text-sm ml-8'>Know the worth of the course</p>
+                </div>
+                <div className="shadow-lg hover:scale-105 hover:shadow-purple-500 cursor-pointer rounded-md border-black p-2">
+    <img src='/s1.jpg' alt='service-1' className='w-56 mx-auto'/>
+    <p className='text-center font-semibold'>AI Tutor & Course Navigation</p>
+    <p className='text-center w-56 text-sm ml-8'>AI-assisted smart doubt resolution</p>
+  </div>
+  <div className="shadow-lg hover:scale-105 hover:shadow-purple-500 cursor-pointer rounded-md border-black p-2">
+    <img src='/multi.jpg' alt='service-1' className='w-56 mx-auto'/>
+    <p className='text-center font-semibold'>Multi-lingual</p>
+    <p className='w-56 text-center text-sm ml-8'>Supports course content in regional language</p>
+  </div>
+  <div className="shadow-lg hover:scale-105 hover:shadow-purple-500 cursor-pointer rounded-md border-black p-2">
+    <img src='/planned.jpg' alt='service-1' className='w-56 mx-auto'/>
+    <p className='text-center font-semibold'>Course Creation</p>
+    <p className='w-56 text-center text-sm ml-8'>We help teachers create their course</p>
+  </div>
+
+          
+      </div>
 
 
 
     {/* Footer */}
-    <div className='flex bg-gradient-to-r from-[#f600fe] via-[#a136ff] to-[#0033d9] text-white justify-center mt-8'>
+    <div className='flex bg-gradient-to-r from-[#f600fe] via-[#a136ff] to-[#0033d9] text-white justify-center mt-16'>
         <div className="pt-8 bottom-0 px-[20px] md:px-[60px] 2xl:px-[110px] flex flex-col md:flex-row gap-36">
             <div className='flex flex-col'>
-                <div className='bg-white mt-8 rounded-full w-48'>
+                <div className='bg-white mt-8 rounded-full w-48 mx-auto'>
                     <img src='/logo.png' alt='logo'/>
                 </div>
                 <div className='mt-24 text-center md:text-start'>
@@ -128,11 +167,9 @@ const Home = () => {
             <p className="text-[14px] w-[327px] mt-2">Get regular updates and stay in touch as we share the latest developments on Vidya Mandir.</p>
         </div>  
         </div>
-    </div>
-    
+    </div> 
+  </div>
 </div>
-
-    </div>
   )
 }
 

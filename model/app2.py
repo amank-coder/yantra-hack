@@ -29,7 +29,7 @@ text_splitter=CharacterTextSplitter(
 texts=text_splitter.split_text(file_content)
 embeddings= HuggingFaceEmbeddings()
 vectorStore_openAI = FAISS.from_texts(texts, embeddings)
-os.environ["OPENAI_API_KEY"]="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"
+os.environ["OPENAI_API_KEY"]="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"
 chain=load_qa_chain(OpenAI(),chain_type="stuff")
 
 def worthness(user_query):
@@ -55,7 +55,7 @@ def translateintolang(text, target_lang):
     return translated_text.text
 
 def reviews(review):
-    Review = openai.ChatCompletion.create(
+    Review = openai.ChatCompletion.create( 
         model="gpt-3.5-turbo",
         messages=[{"role": "user", "content": f"Provide me summary of these review: {review}. It should showcase the plus and negative points of the course. Maximum word limit 30."}],
         max_tokens=1024,

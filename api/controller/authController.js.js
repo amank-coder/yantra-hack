@@ -36,7 +36,7 @@ exports.register = async(req,res, next)=>{
         next(err)
     }
 }
-
+  
 exports.login = async(req, res, next)=>{
     try{
         const user = await User.findOne({email:req.body.email})

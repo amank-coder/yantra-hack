@@ -38,7 +38,8 @@ i18n
           reviews: "Reviews",
           answer: "Answer",
           submit: "Submit",
-          anyDoubts: "Any Doubts"
+          anyDoubts: "Any Doubts",
+          coursedesc: "Training machine learning model can be quite time consuming if training dataset is very big. In this case it makes sense to train a model and save it to a file so that later on while making predictions you can just load that model from a file and you don't need to train it every time. Pickle and sklearn joblib modules can be used for this purpose. Joblib seems to be more efficient with big numpy arrays hence it is preferred when you have many numpy objects involved in your training step."
         }
       },
       hi: {
@@ -68,7 +69,8 @@ i18n
           reviews: "समीक्षाएँ",
           answer: "उत्तर",
           submit: "प्रस्तुत",
-          anyDoubts: "कोई संदेह"
+          anyDoubts: "कोई संदेह",
+          coursedesc:"यदि प्रशिक्षण डेटासेट बहुत बड़ा है तो प्रशिक्षण मशीन लर्निंग मॉडल में काफी समय लग सकता है। इस मामले में एक मॉडल को प्रशिक्षित करना और उसे एक फ़ाइल में सहेजना समझ में आता है ताकि बाद में भविष्यवाणी करते समय आप उस मॉडल को एक फ़ाइल से लोड कर सकें और आपको हर बार इसे प्रशिक्षित करने की आवश्यकता न हो। इस उद्देश्य के लिए पिकल और स्केलेरन जॉबलिब मॉड्यूल का उपयोग किया जा सकता है। जॉबलिब बड़े सुन्न सरणियों के साथ अधिक कुशल प्रतीत होता है, इसलिए इसे तब प्राथमिकता दी जाती है जब आपके प्रशिक्षण चरण में कई सुन्न वस्तुएं शामिल हों।"
         }
       },
       de: {
@@ -317,6 +319,33 @@ i18n
           reviews: "جائزہ"
         }
       },
+      es: {
+        translation: {
+        dashboard: "Tablero",
+        aboutCourse: "Acerca del curso",
+        testYourself: "Prueba tú mismo",
+        aiTutor: "Tutor de IA",
+        coursePlanner: "Planificador de curso",
+        welcomeBack: "¡Bienvenido de nuevo!",
+        whatToLearn: "¿Qué te gustaría aprender hoy?",
+        name: "Nombre",
+        email: "Correo electrónico",
+        qualification: "Calificación",
+        preferredLanguage: "Idioma preferido",
+        knowAboutTheCourse: "Conocer sobre el curso",
+        saveModelToFile: "Guardar modelo en archivo",
+        promptEngineering: "Ingeniería de indicaciones",
+        description: "Descripción",
+        createdBy: "Creado por",
+        techStack: "Pila tecnológica",
+        topicsCovered: "Temas cubiertos",
+        projectIncluded: "Proyecto incluido",
+        reviewAnalysis: "Análisis de reseñas",
+        send: "Enviar",
+        typeYourQuery: "Escribe tu consulta",
+        reviews: "Reseñas"
+        }
+        },
       te: {
         translation: {
           dashboard: "డాష్బోర్డు",

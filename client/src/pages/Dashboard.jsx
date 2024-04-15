@@ -40,6 +40,7 @@ const Dashboard = () => {
                     <select name="name" type='text' className=" px-3 py-2 border rounded-lg bg-gray-100 focus:border-blue-500 focus:outline-none w-72" onChange={(e)=>{
                       localStorage.setItem('lang',e.target.value)
                       window.location.reload()}} value={localStorage.getItem('lang')}>
+                      <option value="en">English</option>
                       <option value="hi">Hindi</option>
                       <option value="bn">Bengali</option>
                       <option value="te">Telugu</option>
@@ -49,7 +50,6 @@ const Dashboard = () => {
                       <option value="gu">Gujarati</option>
                       <option value="kn">Kannada</option>
                       <option value="ml">Malyalam</option>
-                      <option value="en">English</option>
                       <option value="fr">French</option>
                       <option value="de">German</option>
                       <option value="ru">Russian</option>

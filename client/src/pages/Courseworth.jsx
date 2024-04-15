@@ -116,7 +116,7 @@ const Courseworth = () => {
         {selectedCourse && (
             <div className='mt-4 ml-2'>
         {/* <span className='font-semibold text-2xl'>Course name: </span> */}
-        <span className='font-semibold'>{t('description')}: </span><span>{selectedCourse?.description}</span><br />
+        <span className='font-semibold'>{t('description')}: </span><span>{lang=='hi' ? t('coursedesc') : selectedCourse?.description}</span><br />
         <img src='/star.png' className='w-48 -ml-14'/>
         <div className='mb-4'><span className='font-semibold'>{t('createdBy')}: </span><span>{selectedCourse?.createdBy}</span><br /></div>
         
