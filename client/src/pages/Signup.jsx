@@ -19,19 +19,15 @@ const Signup = () => {
           console.log(email)
           console.log(password)
   
-          const { data } = await axios.post(`http://localhost:3000/api/auth/register`,{
+          const { data } = await axios.post(`http://localhost:5000/api/v1/register`,{
             name, email, password
   
           })
   
           console.log(data)
-          if(data?.success)
-          {
-            console.log(data)
-
-            alert("Register successful");
-            navigate("/login");
-          }
+         
+            alert("OTP sent to yout mail!");
+            navigate("/verify-otp");
         }catch(err)
         {
           alert("Invalid! Try again")
@@ -54,7 +50,7 @@ const Signup = () => {
     
                 <label htmlFor="password" className="text-start text-white">Password</label>
                 <input type='password' name="password" className="px-4 py-1 bg-transparent border mb-4" placeholder="Enter password" value={password} onChange={(e)=>setPassword(e.target.value)}/>
-                <div className='text-end text-2xl font-bold hover:underline cursor-pointer text-white'><a href='/login'>Login</a></div>
+                <div className='text-end text-2xl font-bold hover:underline cursor-pointer text-white'><a href='/login-form'>Login</a></div>
                 <div className="mt-2 mx-auto">
                     <button className=" hover:opacity-80 w-[110px] md:w-[245px] h-[28px] md:h-[50px] text-[14px] md:text-[30px] text-white hover:text-main border border-white rounded-lg" type="submit">
                         Submit

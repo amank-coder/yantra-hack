@@ -6,8 +6,10 @@ import Navbar from '../components/Navbar';
 import mobileSide from './../components/MobileSide';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import { UserData } from '../context/UserContext';
 
 const Home = () => {
+    const {isAuth} = UserData()
     const data = [
         {
             name:"Cyber Security",
@@ -59,8 +61,7 @@ const Home = () => {
     <div>
     {/* <mobileSide open={true}/> */}
         <div className='bg-banner2 h-[580px]'>
-        <Navbar />
-
+        <Navbar isAuth={isAuth} />
         
         <h1 className='pt-24 mx-12 text-5xl font-bold'>Preparing Curious <span className='bg-gradient-to-r from-[#f600fe] to-[#a136ff] bg-clip-text text-transparent'>minds</span></h1>
         <h1 className='pt-2 mx-12 text-5xl font-bold'>to design their <span className='bg-gradient-to-r from-[#f600fe] to-[#a136ff] bg-clip-text text-transparent'>future</span></h1>

@@ -15,7 +15,7 @@ export default function Sidebar({ children }) {
       setExpanded(true);  
   },[window.innerWidth])
 
-  const user = JSON.parse(localStorage.getItem("user"))
+  const user = localStorage.getItem("user")
   console.log(user)
 
   return (
@@ -57,10 +57,10 @@ export default function Sidebar({ children }) {
                transition-all ${expanded ? "w-52 ml-3" : "hidden"}
           `}
           >
-            <div className="leading-4">
+            {/* <div className="leading-4">
               <h4 className="font-semibold">{user.name}</h4>
               <span className="text-xs text-gray-600">{user.email}</span>
-            </div>
+            </div> */}
             <div className={`${!logout ? 'hidden' : 'block'} relative left-20 bottom-8`}>
               <Logout />
             </div>

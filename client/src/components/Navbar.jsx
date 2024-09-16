@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Navbar = () => {
+const Navbar = ({isAuth}) => {
   const [activeMenu, setActiveMenu] = useState('');
   const [sidebar, setSidebar] = useState(false);
 
@@ -28,25 +28,24 @@ const Navbar = () => {
       <div className="hidden md:flex justify-end gap-8 w-full items-center">
         <a
           className={ 'hover:scale-110 hover:text-main hover:underline cursor-pointer transition-transform ease-in-out duration-700'}
-          href="/"
+          href="/about-us"
         >
           About
         </a>
 
-        {token && (<a
+        {isAuth && (<a
           className={ 'hover:scale-110 hover:text-main hover:underline cursor-pointer transition-transform ease-in-out duration-700'}
           href="/dashboard"
         >
-          My Courses
+          Dashboard
         </a>)}
         
         <div>
-          {!token ? <button className="w-[144px] h-[51px] text-[18px] border-black hover:text-main border rounded-md hover:bg-gradient-to-r from-[#f600fe] via-[#a136ff] to-[#0033d9] hover:text-white">
+          {!isAuth ? <button className="w-[144px] h-[51px] text-[18px] border-black hover:text-main border rounded-md hover:bg-gradient-to-r from-[#f600fe] via-[#a136ff] to-[#0033d9] hover:text-white">
             <a href="/login">Login</a>
           </button>:<div>{user?.name}</div>}
         </div>
       </div>
-      {/* svelte-ignore a11y-no-static-element-interactions */}
       <div className="md:hidden absolute right-2 ml-4 cursor-pointer flex gap-2">
         {!sidebar ? (
           <div className="group relative inline-block">
@@ -55,7 +54,7 @@ const Navbar = () => {
             </button>
           </div>
         ) : (
-          <div onClick={toggleMenu} onKeyPress={toggleMenu} className="z-40">
+          <div onClick={toggleMenu} className="z-40">
             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" className="bi bi-x" viewBox="0 0 16 16">
               <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" fill="blue"></path>
             </svg>

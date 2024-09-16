@@ -1,16 +1,15 @@
 import React, { useEffect } from 'react'
 import Layout from '../components/layout/Layout.jsx';
 import { useTranslation } from 'react-i18next';
+import { UserData } from '../context/UserContext.jsx';
 
 
 const Dashboard = () => {
   
   const { t, i18n } = useTranslation();
   
-  const user = JSON.parse(localStorage.getItem('user'));
+  const {user} = UserData();
   const lang = localStorage.getItem('lang')
-  
-    
 
     useEffect(()=>{
       i18n.changeLanguage(lang);
@@ -19,7 +18,7 @@ const Dashboard = () => {
   return (
     <Layout>
         <div>
-            <h2 className="mt-6 text-2xl font-bold bg-gradient-to-r from-[#f600fe] via-[#a136ff] to-[#0033d9] bg-clip-text text-transparent ml-8">{t('welcomeBack')} {user?.name.toUpperCase()} ! {t('whatToLearn')}</h2>
+            <h2 className="mt-6 text-2xl font-bold bg-gradient-to-r from-[#f600fe] via-[#a136ff] to-[#0033d9] bg-clip-text text-transparent ml-8">{t('welcomeBack')} {user?.name} ! {t('whatToLearn')}</h2>
             <div>
               <form className='mt-8 flex justify-center items-center gap-16 bg-purple-50 rounded-md mx-8 py-8'>
                 <div className='flex flex-col gap-8'>
